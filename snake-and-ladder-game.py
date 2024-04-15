@@ -25,15 +25,22 @@ def roll_dice():
 
 # Function to get the position after a dice roll
 def get_position(player, current_position):
+    # Roll the dice
     dice_roll = roll_dice()
+    # Print the dice roll and current position
     print(f"Player {player}, you rolled a {dice_roll}. Your current position is {current_position}.")
+    # Calculate the new position after the dice roll
     new_position = current_position + dice_roll
+    # Check if the new position is a ladder or a snake
     if new_position in snakes_and_ladders:
+        # Adjust the new position if it's a ladder or a snake
         new_position = snakes_and_ladders[new_position]
+        # Print a message depending on whether it's a ladder or a snake
         if new_position > current_position:
             print(f"You climbed a ladder! You are now at position {new_position}.")
         else:
             print(f"Uh oh! You landed on a snake. Slide down to position {new_position}.")
+    # Return the new position
     return new_position
 
 # Function to play the game
@@ -58,10 +65,12 @@ def play():
         for i, player in enumerate(players):
             input(f"{player['name']}, it's your turn. Hit enter to roll the dice.")
             players[i]["position"] = get_position(player["name"], player["position"])
+            # Check if the player has reached the final position
             if players[i]["position"] >= FINAL_POSITION:
                 winner = players[i]["name"]
                 break
 
+    # Print the winner
     print(f"Congratulations, {winner}! You are the winner.")
 
 # Start the game
