@@ -41,6 +41,25 @@ on position 16, they will move to position 6 (climb down a ladder).
 
 2. random.randint function - generates a random integer between 1 and 6
 3. The random.randint(1, 6) expression returns a random integer that represents the result of rolling the dice, which is then used to determine how many positions the player should move forward on the board.
+4. for i in range(1, NUM_PLAYERS + 1): 
+    --This line of code is a for loop that iterates over a range of numbers, starting from 1 and ending at NUM_PLAYERS (inclusive). The range(1, NUM_PLAYERS + 1) function generates a sequence of numbers from 1 to NUM_PLAYERS.
 
+    For example, if NUM_PLAYERS is 2, the range will be range(1, 3), which generates the sequence [1, 2]. The loop will then iterate twice, once for each number in the sequence (1 and 2), and the variable i will take on the value of each number in the sequence in each iteration of the loop.
 
+5.   for i in range(1, NUM_PLAYERS + 1):
 
+    That line of code is a for loop that iterates over a range of numbers, starting from 1 and ending at NUM_PLAYERS. The range(1, NUM_PLAYERS + 1) function generates a sequence of numbers from 1 to NUM_PLAYERS.
+
+    For example, if NUM_PLAYERS is 2, the range will be range(1, 3), which generates the sequence [1, 2]. The loop will then iterate twice, once for each number in the sequence (1 and 2), and the variable i will take on the value of each number in the sequence in each iteration of the loop.
+
+6. players.append({"name": player_name, "position": 0})
+
+    This line of code appends a dictionary to the players list. The dictionary contains two key-value pairs:
+
+    "name": player_name: This key-value pair stores the name of the player. player_name is a variable that holds the name of the player, which was obtained from user input earlier in the code.
+
+    "position": 0: This key-value pair initializes the player's position to 0. This is the starting position for all players at the beginning of the game.
+
+    So, for each player, a dictionary is created with their name and a starting position of 0, and this dictionary is added to the players list.
+
+7. enumerate(players): This function takes a list (players in this case) and returns an iterator that yields pairs of index and value. In each iteration, it returns a tuple containing the index of the current item and the item itself.
