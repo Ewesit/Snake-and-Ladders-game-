@@ -27,4 +27,20 @@ Rules of the games are as follows.
 
 To make the game more enjoyable limit the number of users to between 1-4
 
+..........................
+Snake and ladder positions
+
+snakes_and_ladders = {
+    16: 6,
+}
+
+1. This part of the code defines a dictionary named snakes_and_ladders 
+that maps the positions of snakes and ladders on the game board.
+For example, the key-value pair 16: 6 means that if a player lands 
+on position 16, they will move to position 6 (climb down a ladder).
+
+2. random.randint function - generates a random integer between 1 and 6
+3. The random.randint(1, 6) expression returns a random integer that represents the result of rolling the dice, which is then used to determine how many positions the player should move forward on the board.
+
+
 
